@@ -14,6 +14,7 @@ import com.newrelic.agent.android.NewRelic;
 
 import android.content.Context;
 import android.util.Log;
+import android.os.Bundle;
 
 public class NewRelicPlugin extends CordovaPlugin {
 
@@ -38,13 +39,33 @@ public class NewRelicPlugin extends CordovaPlugin {
     }
 
 
+
     private String getAppToken(){
         String token = "";
-        token = this.cordova.getActivity().getStringProperty("NewRelicApplicationToken","CHANGE_ME");
+        token = this.getStringProperty("NewRelicApplicationToken","CHANGE_ME");
 
         Log.d(LOGTAG, "NewRelic Token: " + token);
 
         return token;
+    }
+
+    /**
+     * Get string property for activity.
+     * 
+     * @param name
+     * @param defaultValue
+     * @return
+     */
+    public String getStringProperty(String name, String defaultValue) {
+        Bundle bundle = this.cordova.getActivity().getIntent().getExtras();
+        if (bundle == null) {
+            return defaultValue;
+        }
+        String p = bundle.getString(name);
+        if (p == null) {
+            return defaultValue;
+        }
+        return p;
     }
 
     /**
