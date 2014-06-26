@@ -3,6 +3,7 @@ package com.newrelic.cordova;
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CordovaInterface;
+import org.apache.cordova.CordovaActivity;
 import org.apache.cordova.CordovaWebView;
 import org.json.JSONArray;
 import com.newrelic.agent.android.NewRelic;
@@ -28,11 +29,11 @@ public class NewRelicPlugin extends CordovaPlugin {
 
         NewRelic.withApplicationToken(
           this.getAppToken()
-        ).start(this.getApplication());
+        ).start(this.cordova.getActivity().getApplication());
     }
 
 
-    private string getAppToken(){
+    private String getAppToken(){
         String token = "";
         token = this.cordova.getActivity().getStringProperty("NewRelicApplicationToken");
 
