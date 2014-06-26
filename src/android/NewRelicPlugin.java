@@ -35,7 +35,7 @@ public class NewRelicPlugin extends CordovaPlugin {
 
     private String getAppToken(){
         String token = "";
-        token = this.cordova.getActivity().getStringProperty("NewRelicApplicationToken");
+        token = this.cordova.getStringProperty("NewRelicApplicationToken");
 
         Log.d(LOGTAG, "NewRelic Token: " + token);
 
