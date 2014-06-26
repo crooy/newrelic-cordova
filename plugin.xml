@@ -30,5 +30,16 @@
         <framework src="SystemConfiguration.framework" />
         <framework src="libz.dylib" />
     </platform>
+    <!-- android -->
+    <platform name="android">
+        <config-file target="config.xml" parent="/*">
+            <feature name="NewRelic">
+                <param name="android-package" value="com.newrelic.cordova"/>
+                <param name="onload" value="true" />
+            </feature>
+            <preference name="NewRelicApplicationToken" value="CHANGEME" />
+        </config-file>
+           <source-file src="src/android/NewRelic.java" target-dir="src/com/newrelic/cordova" />
+    </platform>
 
 </plugin>
