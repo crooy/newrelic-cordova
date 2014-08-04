@@ -51,12 +51,13 @@ public class NewRelicPlugin extends CordovaPlugin {
 
     /**
      * Get string property for activity.
-     * 
+     *
      * @param name
      * @param defaultValue
      * @return
      */
     public String getStringProperty(String name, String defaultValue) {
+        name = name.toLowerCase();
         Bundle bundle = this.cordova.getActivity().getIntent().getExtras();
         if (bundle == null) {
             return defaultValue;
