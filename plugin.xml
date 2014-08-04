@@ -20,9 +20,8 @@
             <feature name="NewRelic">
                 <param name="ios-package" value="CDVNewRelic" onload="true" />
             </feature>
-            <preference name="NewRelicApplicationToken" value="CHANGEME" />
         </config-file>
-        
+
         <header-file src="src/ios/CDVNewRelic.h" />
         <source-file src="src/ios/CDVNewRelic.m" />
         <framework src="src/ios/NewRelicFramework/NewRelicAgent.framework" custom="true" />
@@ -37,7 +36,6 @@
                 <param name="android-package" value="com.newrelic.cordova.NewRelicPlugin"/>
                 <param name="onload" value="true" />
             </feature>
-            <preference name="NewRelicApplicationToken" value="CHANGEME" />
         </config-file>
         <source-file src="src/android/NewRelicPlugin.java" target-dir="src/com/newrelic/cordova" />
         <source-file src="src/android/newrelic-android-3.407.0/lib/class.rewriter.jar" target-dir="libs" />
