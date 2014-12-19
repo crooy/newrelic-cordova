@@ -1,7 +1,7 @@
 New Relic Agent
 ================
 
-A Cordova / PhoneGap plugin to add the New Relic Mobile Agent to your application. (Currently iOS only)
+A Cordova / PhoneGap plugin to add the New Relic Mobile Agent to your application. 
 
 __NOTE:__ This plugin requires Cordova / PhoneGap >= 3.3.0 in order to support installation and linking of custom frameworks.
 
