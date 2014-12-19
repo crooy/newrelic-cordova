@@ -12,6 +12,9 @@ Installation
 
 __NOTE:__ There is currently an [issue](https://issues.apache.org/jira/browse/CB-6092) with publishing plugins that have frameworks with symlinks. Please install using the url rather than just the identifier.
 
+you need to add the class rewrite to you ant options like so:
+`export ANT_OPTS="-javaagent:/path/to/newrelic-android-4.120.0/lib/class.rewriter.jar"`
+
 Configuration
 ===============
 
