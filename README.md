@@ -1,16 +1,19 @@
 New Relic Agent
 ================
 
-A Cordova / PhoneGap plugin to add the New Relic Mobile Agent to your application. (Currently iOS only)
+A Cordova / PhoneGap plugin to add the New Relic Mobile Agent to your application. 
 
 __NOTE:__ This plugin requires Cordova / PhoneGap >= 3.3.0 in order to support installation and linking of custom frameworks.
 
 Installation
 ===============
 
-`cordova plugin add http://github.com/jeff-french/newrelic-cordova`
+`cordova plugin install http://github.com/crooy/newrelic-cordova`
 
 __NOTE:__ There is currently an [issue](https://issues.apache.org/jira/browse/CB-6092) with publishing plugins that have frameworks with symlinks. Please install using the url rather than just the identifier.
+
+you need to add the class rewrite to you ant options like so:
+`export ANT_OPTS="-javaagent:/path/to/newrelic-android-4.120.0/lib/class.rewriter.jar"`
 
 Configuration
 ===============
