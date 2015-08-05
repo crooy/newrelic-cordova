@@ -39,6 +39,7 @@
         </config-file>
         <source-file src="src/android/NewRelicPlugin.java" target-dir="src/com/newrelic/cordova" />
         <source-file src="src/android/newrelic-android-5.2.0/lib/newrelic.android.jar" target-dir="libs" />
+        <!--<source-file src="build-extras.gradle" target-dir="CordovaLib"/>-->
     </platform>
 
 </plugin>
