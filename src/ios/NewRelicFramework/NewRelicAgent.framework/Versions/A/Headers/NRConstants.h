@@ -31,7 +31,18 @@ enum NRTraceType {
 #define kNRMemoryUsageDidChangeNotification   @"com.newrelic.memoryusage.changed"
 #define kNRInteractionDidCompleteNotification @"com.newrelic.interaction.complete"
 
+#define kNRMAAnalyticsInitializedNotification @"com.newrelic.analytics.initialized"
+#define kNRMAAnalyticsControllerKey           @"AnalyticsController"
 
+
+//Unique installs/upgrades
+#define kNRMADidGenerateNewUDIDNotification   @"com.newrelic.UDID.new"
+#define kNRMAAppInstallMetric                 @"Mobile/App/Install"
+
+#define kNRMADidChangeAppVersionNotification  @"com.newrelic.app.version.change"
+#define kNRMAAppUpgradeMetric                 @"Mobile/App/Upgrade"
+#define kNRMALastVersionKey                   @"lastVersion"
+#define kNRMACurrentVersionKey                @"currentVersion"
 //Custom Metric Units
 typedef NSString NRMetricUnit;
 
@@ -42,23 +53,26 @@ typedef NSString NRMetricUnit;
 #define kNRMetricUnitsOperations        (NRMetricUnit*)@"op"
 
 
-#define kNRMAMetricSuffixCount           @"Count"
-#define kNRMAMetricSuffixTime            @"Time"
 
 #define kNRMASecondsPerMillisecond      0.001f
 
+//Metrics Constants
 #define kNRSupportabilityPrefix          @"Supportability/MobileAgent"
 #define kNRMAMetricActivityNetworkPrefix @"Mobile/Activity/Network"
 #define kNRAgentHealthPrefix             @"Supportability/AgentHealth"
 #define kNRMASessionStartMetric          @"Session/Start"
+#define kNRMADidRemoveSUDIDPasteboard    kNRAgentHealthPrefix  @"/DidRemoveSUDIDPasteboard"
+
+#define kNRMAMetricSuffixCount           @"Count"
+#define kNRMAMetricSuffixTime            @"Time"
 
 #define kNRMAExceptionHandlerHijackedMetric kNRAgentHealthPrefix @"/Hijacked/ExceptionHandler"
 
+//Network info cache constants
 #define kNRCarrierNameCacheLifetime     50 // milliseconds
 #define kNRWanTypeCacheLifetime         25 // milliseconds
 #define kNRNetworkStatusCacheLifetime   25 // milliseconds
 
-#define kNRMA_MillisecondToSecondRatio .001f
 
 // Network Failure Codes
 enum NRNetworkFailureCode {
