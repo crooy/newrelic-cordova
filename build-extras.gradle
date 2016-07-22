@@ -1,0 +1,23 @@
+apply plugin: 'android'
+
+buildscript {
+  repositories {
+    mavenCentral()
+  }
+
+  dependencies {
+    classpath "com.newrelic.agent.android:agent-gradle-plugin:5.+"
+  }
+}
+
+apply plugin: 'newrelic'
+
+repositories {
+  mavenCentral()
+}
+
+
+
+dependencies {
+  compile 'com.newrelic.agent.android:android-agent:5.+'
+}
