@@ -70,11 +70,6 @@ This product includes 'junit' (http://junit.org/), which is released under the f
 
 ----------------------------------------------------------------
 
-This product includes 'Maven Ant Tasks' (http://maven.apache.org/ant-tasks/index.html), which is released under the following license(s):
-    Apache 2.0 <http://www.apache.org/licenses/LICENSE-2.0>
-
-----------------------------------------------------------------
-
 This product includes 'Mockito' (http://code.google.com/p/mockito/), which is released under the following license(s):
     MIT <http://opensource.org/licenses/mit-license.html>
 
@@ -85,8 +80,16 @@ This product includes 'Square OkHttp' (https://github.com/square/okhttp), which 
 
 ----------------------------------------------------------------
 
+This product includes 'Apache-2' (https://github.com/square/okio), which is released under the following license(s):
+
+----------------------------------------------------------------
+
 This product includes 'Reflections' (http://reflections.googlecode.com/), which is released under the following license(s):
     WTFPL <http://www.wtfpl.net/about/>
+
+----------------------------------------------------------------
+
+This product includes 'Apache-2' (https://github.com/square/retrofit), which is released under the following license(s):
 
 ----------------------------------------------------------------
 
@@ -100,7 +103,7 @@ This product includes 'xml-commons' (http://xerces.apache.org/xml-commons/), whi
 
 ----------------------------------------------------------------
 
-All other components of this product are: Copyright (c) 2010-2014 New Relic, Inc. All rights reserved.
+All other components of this product are: Copyright (c) 2010-2016 New Relic, Inc. All rights reserved.
 
 Certain inventions disclosed in this file may be claimed within patents owned or patent applications
 filed by New Relic, Inc. or third parties. Subject to the terms of this notice, New Relic grants you
